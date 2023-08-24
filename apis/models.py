@@ -23,7 +23,8 @@ class Recipe(models.Model):
                                  on_delete=models.CASCADE)
     title = models.CharField(max_length=100)
     area = models.CharField(max_length=50)
-    thumbnail = models.URLField()
+    thumbnail = models.URLField( null=True, blank=True)
+    image =models.FileField( upload_to='image/', max_length=100)
     ingredients = models.JSONField()
     instructions = models.TextField()
     measures = models.JSONField()
@@ -59,7 +60,7 @@ class Upvote(models.Model):
 class Profile(models.Model):
     organization_id = models.OneToOneField(User, on_delete=models.CASCADE)
     name = models.CharField(max_length=100)
-    # image = models.ImageField(upload_to='images/')
+    image = models.ImageField(upload_to='Profile/')
     contact = models.CharField(max_length=100, null=True, default=None)
     website = models.CharField(max_length=100, null = True, default=None)
     address = models.CharField(max_length=150, null =True, default=None)
