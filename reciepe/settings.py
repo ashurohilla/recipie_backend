@@ -207,6 +207,7 @@ CORS_ORIGIN_ALLOW_ALL = True
 
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:5173',
+    'https://flavorfusion-production.up.railway.app/',
 ]
 
 CORS_ALLOW_CREDENTIALS = True
@@ -223,6 +224,7 @@ GRAPH_MODELS = {
 }
 CORS_ORIGIN_WHITELIST = [
     'http://localhost:5173',
+    'https://flavorfusion-production.up.railway.app/',
     # Replace with your client application's origin
 ]
 CORS_ALLOW_METHODS = [
